@@ -1,15 +1,15 @@
-class Field
+class Board
 {
-    public Field(Square[,] squares)
+    public Board(Square[,] squares)
     {
         Squares = squares;
     }
 
     public Square[,] Squares { get; }
     public Square this[int x, int y] { get => Squares[x, y]; set => Squares[x, y] = value; }
-    public static Field StartPosition()
+    public static Board StartPosition()
     {
-        var res = new Field(new Square[8, 8]);
+        var res = new Board(new Square[8, 8]);
         res.Squares[0, 0] = (Square)1;
         res[0, 0] = (Square)4;
         res[0, 1] = (Square)5;
